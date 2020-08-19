@@ -1,0 +1,41 @@
+.product-img {
+	display: flex;
+	justify-content: flex-start;
+	.prev-arrow,
+	.next-arrow{
+		cursor: pointer;		
+	}
+	.prev-active,
+	.next-active{
+		cursor: not-allowed;
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		justify-content: flex-start;
+		.list-img {
+			width: 25.11rem;
+			height: 5.71rem;
+			position: relative;  //最外层的宽度，父级定位
+			overflow: hidden;						
+			.list-img-wrap {
+				position: absolute; //子级定位，dom操作偏移
+				left: 0;
+				top: 0;
+				.single-img {
+				    cursor: pointer;
+					float: left;								
+					width: 5.71rem;
+					height: 5.71rem;
+					margin: 0 1.33rem;							
+					border: 1px solid #E5E5E5;	
+				}
+				.img-activce{
+					border: 1px solid #C12022;
+				}
+			}
+		}
+	}
+}
